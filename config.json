@@ -1,0 +1,31 @@
+{
+    "network_ranges": [
+        "192.168.1.0/24",
+        "10.0.0.0/24"
+    ],
+    "protocols_to_scan": [
+        "HTTP",
+        "HTTPS",
+        "FTP",
+        "SSH",
+        "RDP"
+    ],
+    "encryption_standards": {
+        "minimum_tls_version": "TLS 1.2",
+        "accepted_ciphers": [
+            "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+            "TLS_RSA_WITH_AES_256_GCM_SHA384"
+        ]
+    },
+    "alert_thresholds": {
+        "public_exposure": true,
+        "weak_encryption": true,
+        "open_ports": [
+            21,
+            22,
+            80,
+            443,
+            3389
+        ]
+    }
+}
